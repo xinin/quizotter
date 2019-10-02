@@ -33,7 +33,8 @@
   .minutes-label,
   .seconds-label {
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 0.7em;
   }
   
   @media (max-width: 800px) {
@@ -46,10 +47,16 @@
       width: 100px;
       height: 100px;
     }
+
+    li{
+        font-size: 0.8em; 
+    }
   }
 
   body {
     background: url('./img/collage.png') no-repeat center center / cover;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.516);
+
   }
 
   ul {
@@ -67,9 +74,9 @@
     align-items: center;
     padding: 12px 10px;
     box-sizing: border-box;
-
+    font-size: 1.5em; 
+    color: white;
   }
-  
   
   /* Element counter */
   li::before {
@@ -86,9 +93,28 @@
     -webkit-text-fill-color: transparent;
   }
   
-  
   /* Element separation */
   li + li {
     border-top: 1px solid rgba(255,255,255,0.2);
   }
-  
+
+  #download-button{
+      cursor: pointer;
+  }
+
+  #clues > p {
+      font-size: 2rem;
+      color: white;
+  }
+
+  #fail {
+    background-color: rgba(0, 0, 0, 0.311);
+    border-radius: 25px;
+    display: none;
+  }
+
+  #fail > span {
+      color: rgb(227, 21, 21);
+      -webkit-text-stroke: 0.1px rgb(227, 133, 133);
+      font-size: 1.7rem;
+  }
