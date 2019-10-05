@@ -1,0 +1,158 @@
+@font-face{
+  font-family:'digital-7';
+  src: url('./fonts/digital-7.ttf');
+ }
+
+ @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+
+.countdown-container {
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 40px;
+    background-image: url("./img/LCD.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+  }
+  
+  .days-container,
+  .hours-container,
+  .minutes-container, 
+  .seconds-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 3.5em; 
+    font-family: 'digital-7';
+    margin: 10px 0;
+    color: rgb(0, 245, 41);
+  }
+  
+  
+  .days-label,
+  .hours-label,
+  .minutes-label,
+  .seconds-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 0.7em;
+  }
+  
+  @media (max-width: 800px) {
+    
+    .days-container,
+    .hours-container,
+    .minutes-container, 
+    .seconds-container {
+      font-size: 0.8em;
+      width: 100px;
+      height: 100px;
+    }
+
+    li{
+        font-size: 0.8em; 
+    }
+  }
+
+  body {
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.516);
+    background-color: rgba(0,0,0,0.1);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+  }
+
+  #download-button{
+      cursor: pointer;
+  }
+
+  #clues > p {
+      font-size: 2rem;
+      color: white;
+  }
+
+  #fail {
+    background-color: rgba(0, 0, 0, 0.311);
+    border-radius: 25px;
+    display: none;
+  }
+
+  #fail > span {
+      color: rgb(227, 21, 21);
+      -webkit-text-stroke: 0.1px rgb(227, 133, 133);
+      font-size: 1.7rem;
+  }
+
+  #dynamite{
+      background-image: url("./img/dynamite-2.png");
+      background-repeat:no-repeat;
+      background-size:contain;
+      background-position:center;
+  }
+
+  #magicword {
+    background-color: rgb(137, 174, 49);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    border: none;
+    text-align: center;
+    
+  }
+
+  .input-group{
+    border: 5px solid rgb(44, 44, 44);
+    font-size: 3.5em; 
+    font-family: 'digital-7';
+    margin: 10px 0;
+    color: rgb(0, 245, 41);
+  }
+
+/* styling paper */
+#paper {
+  width: 600px;
+  position: relative;
+  margin: 20px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+/* styling red vertical line */
+#paper::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255,0,0,0.6);
+}
+
+/* styling blue horizontal lines */
+#pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+#content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
