@@ -3,8 +3,15 @@
   src: url('./fonts/digital-7.ttf');
  }
 
- @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
+body {
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.516);
+  background-color: rgba(0,0,0,0.1);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
 
 .countdown-container {
     display: flex;
@@ -15,17 +22,17 @@
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
-  }
+}
   
-  .days-container,
-  .hours-container,
-  .minutes-container, 
-  .seconds-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.days-container,
+.hours-container,
+.minutes-container, 
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   
   .days,
   .hours,
@@ -57,18 +64,6 @@
       width: 100px;
       height: 100px;
     }
-
-    li{
-        font-size: 0.8em; 
-    }
-  }
-
-  body {
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.516);
-    background-color: rgba(0,0,0,0.1);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
   }
 
   #download-button{
@@ -82,14 +77,17 @@
 
   #fail {
     background-color: rgba(0, 0, 0, 0.311);
-    border-radius: 25px;
+    border-radius: 5px;
+    padding: 0.5em;
     display: none;
   }
 
   #fail > span {
       color: rgb(227, 21, 21);
       -webkit-text-stroke: 0.1px rgb(227, 133, 133);
-      font-size: 1.7rem;
+      font-size: 4.5rem;
+      font-family: 'digital-7';
+      text-align: center;
   }
 
   #dynamite{
@@ -106,12 +104,20 @@
     background-position:center;
     border: none;
     text-align: center;
-    
+    font-size: 2.5rem;
+    color: rgb(0, 245, 41);
+  }
+
+  #download-button {
+    border-left: 5px solid rgb(44, 44, 44);
+  }
+
+  .input-group-text{
+    font-size: 2rem
   }
 
   .input-group{
     border: 5px solid rgb(44, 44, 44);
-    font-size: 3.5em; 
     font-family: 'digital-7';
     margin: 10px 0;
     color: rgb(0, 245, 41);
@@ -119,13 +125,14 @@
 
 /* styling paper */
 #paper {
-  width: 600px;
+  width: 100%;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: white;
   box-shadow: 0px 0px 5px 0px #888;
+  font-size: 2.2em
 }
 
 /* styling red vertical line */
@@ -152,7 +159,27 @@
   padding-right: 16px;
   line-height: 25px;
   font-family: 'Dancing Script', cursive;
-  font-size: 19px;
   letter-spacing: 1px;
   word-spacing: 5px;
+}
+
+#clues > li {
+  margin: 20px;
+  line-height: 2rem;
+}
+
+#clues > li > a > ul > li{
+  margin: 20px;
+}
+
+#magicword::placeholder {
+  color: rgb(0, 245, 41);;
+}
+
+#magicword::-webkit-input-placeholder { /* Edge */
+  color: rgb(0, 245, 41);;
+}
+
+#magicword:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(0, 245, 41);;
 }

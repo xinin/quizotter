@@ -7,59 +7,55 @@
         <div class="container-fluid h-100" style="padding: 0em">
             <div class="row justify-content-md-center h-50">
                 <div id="dynamite" class="row col-sm-10 align-items-center justify-content-md-center m-3">
-                        <div class="row col-sm-6">
-                            <section class="countdown-container">
-                                <div class="days-container">
-                                    <span class="days">00:</span>
-                                </div>
-                                <div class="hours-container">
-                                    <span class="hours">00:</span>
-                                </div>
-                                <div class="minutes-container">
-                                    <span class="minutes">00:</span>
-                                </div>
-                                <div class="seconds-container">
-                                    <span class="seconds">00</span>
-                                </div>
-                            </section>
-                        </div>
+                    <div class="row col-sm-6 justify-content-md-center">
+                        <section class="countdown-container">
+                            <div class="days-container">
+                                <span class="days">00:</span>
+                            </div>
+                            <div class="hours-container">
+                                <span class="hours">00:</span>
+                            </div>
+                            <div class="minutes-container">
+                                <span class="minutes">00:</span>
+                            </div>
+                            <div class="seconds-container">
+                                <span class="seconds">00</span>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <div class="row col-sm-4">
-                        <div class="input-group mt-3">
-                                <input id="magicword" type="text" class="form-control" placeholder="Codigo" aria-describedby="basic-addon2">
-                                <div id="download-button" class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon2">Desactivar</span>
-                                </div>
-                            </div>
-                            <div id="fail" class="row sm-4 mt-2 justify-content-md-center">
-                                <span></span>
+                <div class="row justify-content-md-center">
+                    <div class="input-group mt-3">
+                        <input id="magicword" type="text" class="form-control" placeholder="Codigo" aria-describedby="basic-addon2">
+                        <div id="download-button" class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Desactivar</span>
                         </div>
+                    </div>                
                 </div>
-                
             </div>
             <div class="row justify-content-md-center">
-                <div class="row col-sm-10 h-50">
-                        <div id="paper">
-                            <div id="pattern">
-                                <div id="content">
-                                Pistas
-                                <ul class="w-100">
-                                        <li>¿Que tienen en común estas ciudades?</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                        <li>Las ciudades son:  Nueva York, Londres, Toronto, Melbourne y Hamburgo</li>
-                                    </ul> 
-                                </div>
-                            </div>
-                        </div>
+                <div class="row justify-content-md-center col-md-8">
+                    <div id="fail" class="row mt-2">
+                            <span></span>
+                    </div>
                 </div>
             </div>
             
+            <div class="row justify-content-md-center">
+                <div class="row col-md-10 col-sm-12 h-50">
+                    <div id="paper">
+                        <div id="pattern">
+                            <div id="content">
+                                <span>Pistas</span>
+                                <ul id="clues" class="w-100">
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
         </div>
         <script src="./index.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

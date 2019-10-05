@@ -3,14 +3,34 @@ const daysElement = document.querySelector('.days');
 const hoursElement = document.querySelector('.hours');
 const minutesElement = document.querySelector('.minutes');
 const secondsElement = document.querySelector('.seconds');
+const cluesUL = document.querySelector('#clues');
 let countdown;
 let countdownFail;
+
+let done = false;
 
 function displayTimeLeft(seconds) {
   daysElement.textContent = `${Math.floor(seconds / 86400)}:`;
   hoursElement.textContent = `${Math.floor((seconds % 86400) / 3600)}:`;
   minutesElement.textContent = `${Math.floor(((seconds % 86400) % 3600) / 60)}:`;
   secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+}
+
+function displayClues(seconds) {
+  if (!done) {
+    const daysLeft = 27 - Math.floor(seconds / 86400);
+    const cluesString = [
+      '<li>¿Que tienen en común estas <a target="_blank" href="./img/collage-0.png">ciudades<a/>?</li>',
+      '<li>¿Y si ademas añades estas <a target="_blank" href="./img/collage-1.png">ciudades<a/>?</li>',
+      '<li>Las ciudades son: <ul><li> Nueva York</li><li> Londres</li><li> Toronto</li><li> Melbourne </li><li> Hamburgo</li></ul>',
+      '<li>No me dió tiempo a hacerlo en Nuevo York</li>',
+      '<li>La duración es similar a un año escolar</li>',
+      '<li></li>',
+      '<li></li>',
+    ];
+    cluesUL.innerHTML = cluesString.slice(0, daysLeft + 1).toString().replace(/,/g, '');
+    done = true;
+  }
 }
 
 function timer() {
@@ -23,6 +43,7 @@ function timer() {
       return;
     }
     displayTimeLeft(secondsLeft);
+    displayClues(secondsLeft);
   }, 1000);
 }
 
