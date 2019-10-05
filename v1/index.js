@@ -67,7 +67,7 @@ function download() {
       clearInterval(countdownFail);
       countdownFail = setInterval(() => {
         document.querySelector('#fail').style.display = 'none';
-      }, 1000);
+      }, 3000);
     }
   }
 }
