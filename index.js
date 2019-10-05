@@ -8,9 +8,13 @@ let countdown;
 let countdownFail;
 
 function displayTimeLeft(seconds) {
-  daysElement.textContent = `${Math.floor(seconds / 86400)}:`;
-  hoursElement.textContent = `${Math.floor((seconds % 86400) / 3600)}:`;
-  minutesElement.textContent = `${Math.floor(((seconds % 86400) % 3600) / 60)}:`;
+  const days = Math.floor(seconds / 86400);
+  const hours = Math.floor((seconds % 86400) / 3600);
+  const minutes = Math.floor(((seconds % 86400) % 3600) / 60);
+
+  daysElement.textContent = `${(days) <= 9 ? `0${days}` : days}:`;
+  hoursElement.textContent = `${(hours) <= 9 ? `0${hours}` : hours}:`;
+  minutesElement.textContent = `${(minutes) <= 9 ? `0${minutes}` : minutes}:`;
   secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
 }
 
