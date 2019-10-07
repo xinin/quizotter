@@ -19,7 +19,7 @@ function displayTimeLeft(seconds) {
 }
 
 function displayClues(seconds) {
-  const daysLeft = 7 - Math.floor(seconds / 86400);
+  const delta = 7 - Math.floor(seconds / 86400);
   const cluesString = [
     '<li>¿Que tienen en común estas <a target="_blank" href="./img/collage-0.png">ciudades<a/>?</li>',
     '<li>¿Y si ademas añades estas <a target="_blank" href="./img/collage-1.png">ciudades<a/>?</li>',
@@ -29,7 +29,7 @@ function displayClues(seconds) {
     '<li>Esta historia no se ha llevado a la gran pantalla</li>',
     '<li>Tiene relación con la alfarería</li>',
   ];
-  cluesUL.innerHTML = cluesString.slice(0, daysLeft + 1).toString().replace(/,/g, '');
+  if (delta >= 0) cluesUL.innerHTML = cluesString.slice(0, delta + 1).toString().replace(/,/g, '');
 }
 
 function timer() {
