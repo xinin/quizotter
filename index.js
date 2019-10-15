@@ -1,4 +1,4 @@
-
+/* 1907 */
 const daysElement = document.querySelector('.days');
 const hoursElement = document.querySelector('.hours');
 const minutesElement = document.querySelector('.minutes');
@@ -23,17 +23,17 @@ function displayClues(seconds) {
   const cluesString = [
     '<li>¿Que tienen en común estas <a target="_blank" href="./img/collage-0.png">ciudades<a/>?</li>',
     '<li>¿Y si ademas añades estas <a target="_blank" href="./img/collage-1.png">ciudades<a/>?</li>',
-    '<li>Las ciudades son: <ul><li>Nueva York</li><li>Londres</li><li>Toronto</li><li>Melbourne</li><li>Hamburgo</li></ul>',
-    '<li>Todo gira alrededor de un director departamental</li>',
+    '<li>Las ciudades son: <ul><li>San Francisco</li><li>Nueva York</li><li>Londres</li><li>Toronto</li><li>Melbourne</li><li>Hamburgo</li></ul>',
     '<li>No me dió tiempo a verlo en Nuevo York</li>',
-    '<li>Esta historia no se ha llevado a la gran pantalla</li>',
     '<li>Tiene relación con la alfarería</li>',
+    '<li>Esta historia no se ha llevado a la gran pantalla</li>',
+    '<li>Todo gira alrededor de un director departamental</li>',
   ];
   if (delta >= 0) cluesUL.innerHTML = cluesString.slice(0, delta + 1).toString().replace(/,/g, '');
 }
 
 function timer() {
-  const then = new Date(2019, 9, 20, 23, 59, 59, 59);
+  const then = new Date(2019, 9, 20, 19, 59, 59, 59);
 
   countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -54,8 +54,8 @@ function download() {
     value = value.trim().toLowerCase().replace(/\s/g, '');
     if (/harry|potter|musical|cursed|child/.test(value)) {
       const element = document.createElement('a');
-      element.setAttribute('href', './saludo.zip');
-      element.setAttribute('download', 'saludo.zip');
+      element.setAttribute('href', './YAS.pdf');
+      element.setAttribute('download', 'YAS.pdf');
       element.style.display = 'none';
       document.body.appendChild(element);
       element.click();
